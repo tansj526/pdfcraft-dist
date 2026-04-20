@@ -1,0 +1,11 @@
+{
+  "name": "pdfcraft-dist",
+  "compatibility_date": "2026-01-06",
+  "main": "./index.mjs",
+  "assets": {
+    "directory": "./static",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  }
+}
