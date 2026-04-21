@@ -171,19 +171,6 @@ export default {
       if (isStaticAsset(url.pathname)) {
         newResponseHeaders.set("Cache-Control", "max-age=31536000");
       }
-      const contentType = newResponseHeaders.get("content-type") || ""
-      if (contentType.includes("text/html")) {
-        let html = await originalResponse.text()
-        // 移除 biag
-        html = html.replace(
-          /<script[^>]*src="\/biag\/"[^>]*><\/script>/gi,
-          ''
-        )
-        return new Response(html, {
-          status: status,
-          headers: newResponseHeaders,
-        })
-      }
       return new Response(body, {
         status: status, // originalResponse.status,
         headers: newResponseHeaders,
