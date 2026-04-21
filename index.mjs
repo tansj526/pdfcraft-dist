@@ -108,15 +108,7 @@ export default {
         let hostname = originHostname.split('.')[0]
         let dir = hostname
         let newPathname = url.pathname
-        const langList = [
-          'zh',
-          'en',
-          'fr',
-          'es',
-          'pt',
-          'de',
-          'jp',
-        ]
+        const langList = ['en', 'ja', 'ko', 'es', 'fr', 'de', 'zh', 'zh-TW', 'pt', 'ar', 'it', 'id', 'vi']
         // 定义一个不需要重定向的路径白名单
         const noRedirectPaths = [
           "/baidu_verify_codeva-mLRhHWXOP9.html",
