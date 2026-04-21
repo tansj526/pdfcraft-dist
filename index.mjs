@@ -173,7 +173,7 @@ export default {
       }
       const contentType = newResponseHeaders.get("content-type") || ""
       if (contentType.includes("text/html")) {
-        let html = await res.text()
+        let html = await originalResponse.text()
         // 移除 biag
         html = html.replace(
           /<script[^>]*src="\/biag\/"[^>]*><\/script>/gi,
