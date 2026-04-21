@@ -81,7 +81,7 @@ async function replaceResponseText(
 
 // 判断是否是静态资源
 function isStaticAsset(path) {
-  return /\.(js|css|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|map|json|xml|mp4|webm|txt|pdf)$/i.test(path)
+  return /\.(js|mjs|cjs|css|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|map|json|xml|mp4|webm|txt|pdf|webmanifest|wasm|whl|pfb|icc)$/i.test(path)
 }
 
 export default {
